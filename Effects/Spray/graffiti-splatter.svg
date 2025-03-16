@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200">
+  <!-- Graffiti Splatter Effect -->
+  <defs>
+    <!-- Spray noise filter -->
+    <filter id="noiseFilter">
+      <feTurbulence type="fractalNoise" baseFrequency="0.1" numOctaves="3" seed="5" />
+      <feComposite operator="in" in2="SourceGraphic" />
+    </filter>
+    
+    <!-- Displacement filter -->
+    <filter id="displacementFilter">
+      <feTurbulence type="turbulence" baseFrequency="0.05" numOctaves="2" seed="3" />
+      <feDisplacementMap in="SourceGraphic" scale="10" />
+    </filter>
+    
+    <!-- Splatter mask -->
+    <mask id="splatterMask">
+      <rect width="100%" height="100%" fill="white" />
+      
+      <!-- Random dots -->
+      <g fill="black">
+        <circle cx="350" cy="100" r="3" />
+        <circle cx="360" cy="90" r="2" />
+        <circle cx="370" cy="110" r="1.5" />
+        <circle cx="340" cy="120" r="2.5" />
+        <circle cx="355" cy="95" r="1" />
+        <circle cx="365" cy="115" r="2" />
+        <circle cx="375" cy="85" r="1.5" />
+      </g>
+    </mask>
+  </defs>
+  
+  <!-- Main splatter group -->
+  <g fill="black">
+    <!-- Large central splatter -->
+    <path d="M200,100 
+             C260,80 230,40 180,50 
+             C120,60 100,90 120,110 
+             C140,130 170,140 200,120 
+             C230,100 270,120 240,150 
+             C210,180 160,170 140,140 
+             C120,110 160,80 200,100 Z" />
+    
+    <!-- Drips -->
+    <path d="M160,140 L150,190" stroke="black" stroke-width="10" stroke-linecap="round" />
+    <path d="M200,120 L210,180" stroke="black" stroke-width="8" stroke-linecap="round" />
+    <path d="M230,140 L240,170" stroke="black" stroke-width="6" stroke-linecap="round" />
+    
+    <!-- Small splatter left -->
+    <path d="M80,90 
+             C100,70 120,80 110,100 
+             C100,120 70,110 80,90 Z" />
+    
+    <!-- Small splatter right -->
+    <path d="M300,70 
+             C320,60 330,80 320,90 
+             C310,100 290,90 300,70 Z" />
+  </g>
+  
+  <!-- Spray dots -->
+  <g fill="black" opacity="0.7">
+    <!-- Left spray -->
+    <circle cx="70" cy="80" r="1.5" />
+    <circle cx="65" cy="90" r="1" />
+    <circle cx="75" cy="95" r="0.8" />
+    <circle cx="60" cy="85" r="1.2" />
+    <circle cx="55" cy="95" r="0.7" />
+    <circle cx="50" cy="80" r="1" />
+    <circle cx="45" cy="90" r="0.5" />
+    
+    <!-- Right spray -->
+    <circle cx="320" cy="60" r="1.5" />
+    <circle cx="330" cy="55" r="1" />
+    <circle cx="325" cy="50" r="0.8" />
+    <circle cx="335" cy="65" r="1.2" />
+    <circle cx="340" cy="55" r="0.7" />
+    <circle cx="345" cy="60" r="1" />
+    <circle cx="350" cy="50" r="0.5" />
+  </g>
+  
+  <!-- Noise overlay -->
+  <rect width="400" height="200" fill="black" opacity="0.05" filter="url(#noiseFilter)" />
+  
+  <!-- Rough edges (using displacement) -->
+  <g fill="none" stroke="black" stroke-width="1" filter="url(#displacementFilter)">
+    <path d="M200,100 
+             C260,80 230,40 180,50 
+             C120,60 100,90 120,110 
+             C140,130 170,140 200,120 
+             C230,100 270,120 240,150 
+             C210,180 160,170 140,140 
+             C120,110 160,80 200,100 Z" />
+  </g>
+</svg>
