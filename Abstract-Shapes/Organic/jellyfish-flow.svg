@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500">
+  <!-- Jellyfish/Medusa Abstract Flow -->
+  <defs>
+    <linearGradient id="jellyfishGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff00ff" stop-opacity="0.7" />
+      <stop offset="50%" stop-color="#9900ff" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#00f0ff" stop-opacity="0.7" />
+    </linearGradient>
+    
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- Main dome/bell shape -->
+  <path d="M200,50 
+           C260,50 300,100 320,150 
+           C340,200 300,250 200,250 
+           C100,250 60,200 80,150 
+           C100,100 140,50 200,50 Z" 
+        fill="url(#jellyfishGradient)" 
+        opacity="0.6" 
+        filter="url(#glow)" />
+  
+  <!-- Flowing tentacles -->
+  <g fill="none" stroke="url(#jellyfishGradient)" stroke-width="2" opacity="0.7">
+    <!-- Center tentacle -->
+    <path d="M200,250 
+             C200,300 220,350 180,400 
+             C160,430 200,450 200,480" 
+          filter="url(#glow)" />
+    
+    <!-- Left tentacles -->
+    <path d="M160,250 
+             C140,300 100,350 120,400 
+             C130,430 160,450 150,480" 
+          filter="url(#glow)" />
+    
+    <path d="M130,240 
+             C100,300 80,350 60,370 
+             C40,390 20,430 30,480" 
+          filter="url(#glow)" />
+    
+    <!-- Right tentacles -->
+    <path d="M240,250 
+             C260,300 300,350 280,400 
+             C270,430 240,450 250,480" 
+          filter="url(#glow)" />
+    
+    <path d="M270,240 
+             C300,300 320,350 340,370 
+             C360,390 380,430 370,480" 
+          filter="url(#glow)" />
+  </g>
+  
+  <!-- Internal structure -->
+  <path d="M140,150 
+           C160,120 240,120 260,150 
+           C280,180 260,220 200,220 
+           C140,220 120,180 140,150 Z" 
+        fill="none" 
+        stroke="#ffffff" 
+        stroke-width="1" 
+        opacity="0.3" />
+  
+  <!-- Dots/highlights -->
+  <g fill="#ffffff" opacity="0.8">
+    <circle cx="180" cy="120" r="3" />
+    <circle cx="220" cy="120" r="3" />
+    <circle cx="200" cy="150" r="5" />
+    <circle cx="160" cy="170" r="2" />
+    <circle cx="240" cy="170" r="2" />
+    <circle cx="190" cy="200" r="2" />
+    <circle cx="210" cy="200" r="2" />
+  </g>
+</svg>
