@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300">
+  <!-- Abstract Wave Form -->
+  <defs>
+    <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff00ff" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#00f0ff" stop-opacity="1" />
+      <stop offset="100%" stop-color="#ff00ff" stop-opacity="0.8" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Main wave path -->
+  <path d="M0,150 
+           C50,50 100,250 150,150 
+           S250,50 300,150 
+           S400,250 450,150 
+           S550,50 600,150 
+           S700,250 750,150 
+           S850,50 800,150" 
+        fill="none" 
+        stroke="url(#waveGradient)" 
+        stroke-width="3" />
+  
+  <!-- Secondary wave (echo effect) -->
+  <path d="M0,150 
+           C50,70 100,230 150,150 
+           S250,70 300,150 
+           S400,230 450,150 
+           S550,70 600,150 
+           S700,230 750,150 
+           S850,70 800,150" 
+        fill="none" 
+        stroke="url(#waveGradient)" 
+        stroke-width="2"
+        opacity="0.5" />
+  
+  <!-- Tertiary wave (echo effect) -->
+  <path d="M0,150 
+           C50,30 100,270 150,150 
+           S250,30 300,150 
+           S400,270 450,150 
+           S550,30 600,150 
+           S700,270 750,150 
+           S850,30 800,150" 
+        fill="none" 
+        stroke="url(#waveGradient)" 
+        stroke-width="1.5"
+        opacity="0.3" />
+  
+  <!-- Points on the wave -->
+  <g fill="#00f0ff">
+    <circle cx="0" cy="150" r="3" />
+    <circle cx="150" cy="150" r="3" />
+    <circle cx="300" cy="150" r="3" />
+    <circle cx="450" cy="150" r="3" />
+    <circle cx="600" cy="150" r="3" />
+    <circle cx="800" cy="150" r="3" />
+  </g>
+</svg>
