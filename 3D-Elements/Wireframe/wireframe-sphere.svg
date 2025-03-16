@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Wireframe Sphere -->
+  <g fill="none" stroke="#00f0ff" stroke-width="1">
+    <!-- Horizontal circles -->
+    <circle cx="200" cy="200" r="150" />
+    <ellipse cx="200" cy="200" rx="150" ry="30" />
+    <ellipse cx="200" cy="200" rx="150" ry="60" />
+    <ellipse cx="200" cy="200" rx="150" ry="90" />
+    <ellipse cx="200" cy="200" rx="150" ry="120" />
+    
+    <!-- Vertical circles (rotated ellipses) -->
+    <ellipse cx="200" cy="200" rx="30" ry="150" />
+    <ellipse cx="200" cy="200" rx="60" ry="150" />
+    <ellipse cx="200" cy="200" rx="90" ry="150" />
+    <ellipse cx="200" cy="200" rx="120" ry="150" />
+    
+    <!-- Diagonal circles -->
+    <g transform="rotate(45, 200, 200)">
+      <ellipse cx="200" cy="200" rx="150" ry="30" />
+      <ellipse cx="200" cy="200" rx="150" ry="90" />
+    </g>
+    
+    <g transform="rotate(-45, 200, 200)">
+      <ellipse cx="200" cy="200" rx="150" ry="30" />
+      <ellipse cx="200" cy="200" rx="150" ry="90" />
+    </g>
+  </g>
+</svg>
