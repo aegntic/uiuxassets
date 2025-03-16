@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
+  <!-- Glitch Text Effect -->
+  <defs>
+    <filter id="displacementFilter">
+      <feTurbulence type="turbulence" baseFrequency="0.05" numOctaves="2" seed="1" />
+      <feDisplacementMap in="SourceGraphic" scale="10" />
+    </filter>
+    
+    <filter id="glitchFilter">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="1" seed="3" />
+      <feDisplacementMap in="SourceGraphic" scale="5" />
+    </filter>
+    
+    <filter id="blurFilter">
+      <feGaussianBlur stdDeviation="1" />
+    </filter>
+  </defs>
+  
+  <style>
+    .glitch-text {
+      font-family: 'Arial', sans-serif;
+      font-weight: bold;
+      font-size: 80px;
+      text-transform: uppercase;
+    }
+    
+    .base {
+      fill: #ffffff;
+    }
+    
+    .shadow-1 {
+      fill: #ff00ff;
+      opacity: 0.7;
+    }
+    
+    .shadow-2 {
+      fill: #00f0ff;
+      opacity: 0.7;
+    }
+  </style>
+  
+  <!-- Text layers -->
+  <g class="glitch-text">
+    <!-- Base text -->
+    <text x="50" y="170" class="base">GLITCH</text>
+    
+    <!-- Displaced shadow 1 -->
+    <text x="52" y="172" class="shadow-1" filter="url(#displacementFilter)">GLITCH</text>
+    
+    <!-- Displaced shadow 2 -->
+    <text x="48" y="168" class="shadow-2" filter="url(#glitchFilter)">GLITCH</text>
+    
+    <!-- Blurred overlay -->
+    <text x="50" y="170" class="base" opacity="0.3" filter="url(#blurFilter)">GLITCH</text>
+  </g>
+  
+  <!-- Horizontal glitch lines -->
+  <g stroke="#ffffff" stroke-width="1">
+    <line x1="40" y1="100" x2="120" y2="100" opacity="0.6" />
+    <line x1="150" y1="120" x2="300" y2="120" opacity="0.4" />
+    <line x1="100" y1="220" x2="200" y2="220" opacity="0.5" />
+    <line x1="250" y1="190" x2="400" y2="190" opacity="0.3" />
+  </g>
+  
+  <!-- Spray/Distortion elements -->
+  <g fill="#ffffff" opacity="0.6">
+    <!-- Random dots -->
+    <circle cx="80" cy="80" r="1" />
+    <circle cx="150" cy="75" r="1.5" />
+    <circle cx="200" cy="90" r="1" />
+    <circle cx="230" cy="80" r="2" />
+    <circle cx="290" cy="95" r="1" />
+    <circle cx="310" cy="85" r="1.5" />
+    
+    <circle cx="100" cy="250" r="1.5" />
+    <circle cx="160" cy="240" r="1" />
+    <circle cx="210" cy="255" r="2" />
+    <circle cx="270" cy="245" r="1" />
+    <circle cx="300" cy="260" r="1.5" />
+    <circle cx="340" cy="250" r="1" />
+    
+    <!-- Small slashed lines -->
+    <rect x="350" y="100" width="15" height="1" transform="rotate(45, 350, 100)" />
+    <rect x="370" y="110" width="20" height="1.5" transform="rotate(-30, 370, 110)" />
+    <rect x="390" y="95" width="10" height="1" transform="rotate(15, 390, 95)" />
+    
+    <rect x="360" y="240" width="15" height="1" transform="rotate(30, 360, 240)" />
+    <rect x="380" y="230" width="20" height="1.5" transform="rotate(-45, 380, 230)" />
+    <rect x="400" y="245" width="10" height="1" transform="rotate(60, 400, 245)" />
+  </g>
+  
+  <!-- Digital noise overlay -->
+  <rect x="0" y="0" width="600" height="300" fill="#ffffff" opacity="0.03" filter="url(#displacementFilter)" />
+</svg>
