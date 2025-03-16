@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Wireframe Cube -->
+  <g fill="none" stroke="#9900ff" stroke-width="1.5">
+    <!-- Front face -->
+    <rect x="100" y="100" width="200" height="200" />
+    
+    <!-- Back face -->
+    <rect x="150" y="50" width="200" height="200" />
+    
+    <!-- Connecting lines -->
+    <line x1="100" y1="100" x2="150" y2="50" />
+    <line x1="300" y1="100" x2="350" y2="50" />
+    <line x1="100" y1="300" x2="150" y2="250" />
+    <line x1="300" y1="300" x2="350" y2="250" />
+    
+    <!-- Interior grid lines (front face) -->
+    <line x1="100" y1="150" x2="300" y2="150" />
+    <line x1="100" y1="200" x2="300" y2="200" />
+    <line x1="100" y1="250" x2="300" y2="250" />
+    
+    <line x1="150" y1="100" x2="150" y2="300" />
+    <line x1="200" y1="100" x2="200" y2="300" />
+    <line x1="250" y1="100" x2="250" y2="300" />
+    
+    <!-- Interior grid lines (back face) -->
+    <line x1="150" y1="100" x2="350" y2="100" />
+    <line x1="150" y1="150" x2="350" y2="150" />
+    <line x1="150" y1="200" x2="350" y2="200" />
+    
+    <line x1="200" y1="50" x2="200" y2="250" />
+    <line x1="250" y1="50" x2="250" y2="250" />
+    <line x1="300" y1="50" x2="300" y2="250" />
+  </g>
+</svg>
